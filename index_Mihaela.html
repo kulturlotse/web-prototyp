@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Open Iconic -->
+    <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
+    <link href="./ressources/mihaelas_css.css" rel="stylesheet">
+    <title>Kulturlotse</title>
+    <style>
+        [class*="col"] {
+            padding-top: 2px;
+        }
+
+        [class*="con"] {
+            padding: 1rem;
+        }
+
+        .horiScroll > .row {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .horiScroll > .row > .col-8 {
+            flex: 0 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="main-navigation">
+        <div class="container-fluid">
+            <button class="navbar-toggler collapsed p-0 border-0" type="button" data-bs-toggle="offcanvas"
+                    aria-label="toggle-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand small" href="#"><img style="margin-left:10px" src="img/kulturlotse.svg" height="32"
+                                                        alt="Kulturlotsen-Logo"></a>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                           aria-expanded="false">Themen</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="#">Musik</a></li>
+                            <li><a class="dropdown-item" href="#">Lesung/Vortrag</a></li>
+                            <li><a class="dropdown-item" href="#">Markt/Fest</a></li>
+                            <li><a class="dropdown-item" href="#">Film/TV</a></li>
+                            <li><a class="dropdown-item" href="#">Kinder/Jugendliche</a></li>
+                            <li><a class="dropdown-item" href="#">Ausstellung</a></li>
+                            <li><a class="dropdown-item" href="#">Sport/Fitness</a></li>
+                            <li><a class="dropdown-item" href="#">Naturerlebnis</a></li>
+                            <li><a class="dropdown-item" href="#">Barrierefreiheit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Verein</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Presse</a>
+                    </li>
+                    <li class="nav-item d-lg-none d-xl-none d-xxl-none">
+                        <a class="nav-link" href="#">Event melden</a>
+                    </li>
+                    <li class="nav-item  d-lg-none d-xl-none d-xxl-none">
+                        <a class="nav-link" href="#">Impressum</a>
+                    </li>
+                    <li class="nav-item  d-lg-none d-xl-none d-xxl-none">
+                        <a class="nav-link" href="#">Datenschutz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="b-example-divider"></div>
+<main class="container">
+    <div class="col-sm carousel slide" data-bs-ride="carousel" id="carousel1">
+        <ol class="carousel-indicators top-0 start-30">
+            <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carousel1" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carousel1" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carousel1" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.kulturlotse.de/bild/l/warmup-live-2065078074.jpg?0" class="d-block w-100" alt="..."/>
+                <div class="card-body position-absolute bottom-0 start-0 bg-light bg-gradient" style="width: 100%">
+                    <h6 class="card-title text-warning">Warm-up Live</h6>
+                    <p class="card-text text-muted">Online</p>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.kulturlotse.de/bild/l/ukulele-spielen-lernen--1739699873.jpg?0" class="d-block w-100"
+                     alt="..."/>
+                <div class="card-body position-absolute bottom-0 start-0 bg-light bg-gradient" style="width: 100%">
+                    <h6 class="card-title text-warning">Langschläferflohmarkt</h6>
+                    <p class="card-text text-muted">Überseeboulevard</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.kulturlotse.de/bild/l/hamburg-aerospace-lecture-series-the-role-of-technology-in-the-future-aircraft-cabin-1751958642.jpg"
+                     class="d-block w-100" alt="..."/>
+                <div class="card-body position-absolute bottom-0 start-0 bg-light bg-gradient" style="width: 100%">
+                    <h6 class="card-title text-warning">Hamburg Aerospace Lecture Series: "The Role of Technology in the Future
+                        Aircraft Cabin</h6>
+                    <p class="card-text text-muted">Online</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.kulturlotse.de/bild/m/digitale-angebote-zur-dauerausstellung-und-zu-sonderausstellungen-691015070.jpg"
+                     class="d-block w-100" alt="..."/>
+                <div class="card-body position-absolute bottom-0 start-0 bg-light bg-gradient" style="width: 100%">
+                    <h6 class="card-title text-warning">Digitale Angebote zur Dauerausstellung und zu Sonderausstellungen</h6>
+                    <p class="card-text text-muted">Pinneberg Museum</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel1" role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+                                                                                                 aria-hidden="true"></span> </a> <a
+        class="carousel-control-next" href="#carousel1" role="button" data-bs-slide="next"> <span class="carousel-control-next-icon"
+                                                                                                  aria-hidden="true"></span> </a>
+    <div class="b-example-divider"></div>
+    <div class="col mt-2">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active me-1" id="nav-music-tab" data-bs-toggle="tab" data-bs-target="#nav-music"
+                        type="button" role="tab" aria-controls="nav-music" aria-selected="true"><span
+                        class="oi oi-musical-note"></span> Musik
+                </button>
+                <button class="nav-link me-1" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+                        role="tab" aria-controls="nav-profile" aria-selected="false"><span class="oi oi-book"></span> Lesung/Vortrag
+                </button>
+                <button class="nav-link me-1" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+                        role="tab" aria-controls="nav-contact" aria-selected="false"><span class="oi oi-monitor"></span> Film
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-music" role="tabpanel" aria-labelledby="nav-music-tab">
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative flex-nowrap">
+                            <div class="col-3 m-2">
+                                <img src="https://picsum.photos/800/400?random=15" class="rounded img-fluid mb-2" width="50" height="50"
+                                     alt="" style="width: 150px; height: 150px; object-fit: cover;">
+
+                                <div class="text-muted text-nowrap">
+                                    <span class="oi oi-calendar px-1"></span><small>16.03.2021 - 30.04.2021</small>
+                                    <span class="oi oi-map ps-5 px-1"></span><small>St. Pauli</small>
+                                </div>
+                            </div>
+
+                            <div class="col-8 flex-column position-static">
+
+                                <h6 class="mb-2 mt-2 text-warning">Antik- und Flohmarkt "Flohschanze"</h6>
+                                <p class="card-text truncate small">Vom 16.03.2021 - 30.04.2021 könnt ihr während der
+                                    Öffnungszeiten eine kostenlose Basteltüte in der Bücherhalle Niendorf abholen. Die
+                                    Basteltüte enthält eine Anleitung zum Basteln einer Mini-Taschenlampe und das dazugehörige
+                                    Bastelmaterial. Die Mini-Taschenlampe könnt ihr zu Hause ganz leicht nachbasteln. Kommt
+                                    einfach vorbei und fragt an der Servicetheke beim Personal nach der Basteltüte (nur so lange
+                                    der Vorrat reicht) . Wir wünschen euch viel Spaß beim Basteln!</p>
+
+                                <div class="float-end"><a href="#" class="stretched-link mt-4 small">Mehr Informationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
+                            <div class="col-3 m-2">
+                                <img src="https://picsum.photos/800/400?random=20" class="rounded img-fluid mb-2" width="50" height="50"
+                                     alt="" style="width: 150px; height: 150px; object-fit: cover;">
+
+                                <div class="text-muted text-nowrap">
+                                    <span class="oi oi-calendar px-1"></span><small>Immer Samstags</small>
+                                    <span class="oi oi-map ps-5 px-1"></span><small>Überseeboulevard</small>
+                                </div>
+                            </div>
+                            <div class="col-8 flex-column position-static">
+                                <h6 class="mb-2 mt-2 text-warning">Flomarkt Horner-Rennbahn</h6>
+                                <p class="card-text truncate small">Der Flohdom Hamburg-Horn direkt an der Horner Rennbahn
+                                    bietet seit 2009 allen Flohmarktfreunden jeden Samstag einen Treffpunkt und Marktplatz im
+                                    Sinne der Flohdom-Tradition.
+                                    Bei schönem Wetter wird auch draußen mit Blick ins Grüne um Trödel und Nippes, Hausrat und
+                                    Second-Hand Kleidung gefeilscht.
+                                    Die Preise für Standflächen sind aufgrund des großzügigen Platzangebotes
+                                    (ca. 20 000qm) einmalig günstig.</p>
+
+                                <div class="float-end"><a href="#" class="stretched-link mt-4 small">Mehr Informationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative flex-nowrap">
+                            <div class="col-3 m-2">
+                                <img src="https://picsum.photos/800/400?random=21" class="rounded img-fluid mb-2" width="50" height="50"
+                                     alt="" style="width: 150px; height: 150px; object-fit: cover;">
+
+                                <div class="text-muted text-nowrap">
+                                    <span class="oi oi-calendar px-1"></span><small>16.03.2021 - 30.04.2021</small>
+                                    <span class="oi oi-map ps-5 px-1"></span><small>St. Pauli</small>
+                                </div>
+                            </div>
+
+                            <div class="col-8 flex-column position-static">
+
+                                <h6 class="mb-2 mt-2 text-warning">Antik- und Flohmarkt "Flohschanze"</h6>
+                                <p class="card-text truncate small">Vom 16.03.2021 - 30.04.2021 könnt ihr während der
+                                    Öffnungszeiten eine kostenlose Basteltüte in der Bücherhalle Niendorf abholen. Die
+                                    Basteltüte enthält eine Anleitung zum Basteln einer Mini-Taschenlampe und das dazugehörige
+                                    Bastelmaterial. Die Mini-Taschenlampe könnt ihr zu Hause ganz leicht nachbasteln. Kommt
+                                    einfach vorbei und fragt an der Servicetheke beim Personal nach der Basteltüte (nur so lange
+                                    der Vorrat reicht) . Wir wünschen euch viel Spaß beim Basteln!</p>
+
+                                <div class="float-end"><a href="#" class="stretched-link mt-4 small">Mehr Informationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav aria-label="Standard pagination example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+</main>
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4 bg-secondary">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-0 mb-2 text-warning">Kulturlotse Hamburg e.V.</h5>
+				<hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
+				<p>Unterstützen Sie uns!</p>
+				<h4>Spendekonto</h4>
+        <p>GLS Gemeinschaftsbank eG, IBAN: DE50 4306 0967 2041 9378 00, BIC: GENODEM1GLS</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Über uns</h5>
+				<hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="link-light">Verein</a>
+          </li>
+					<li>
+            <a href="#!" class="link-light">Team</a>
+          </li>
+					<li>
+            <a href="#!" class="link-light">Presse</a>
+          </li>
+          <li>
+            <a href="#!" class="link-light">Impressum</a>
+          </li>
+          <li>
+            <a href="#!" class="link-light">Datenschutz</a>
+          </li>
+          <li>
+            <a href="#!" class="link-light">AGB</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+		<h5 class="font-weight-bold mb-2">Helfen Sie uns noch aktueller zu werden!</h5>
+    <a href="#!" class="link-light">Event melden</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<script src="./ressources/mihaelas_js.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.8/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+</script>
+</body>
+</html>
