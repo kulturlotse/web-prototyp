@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- Open Iconic -->
+	<link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+	<title>Hello, world!</title>
+	<style>		
+		a {
+			text-decoration:none!important;
+			font-weight:bold!important;
+			color:#808080;
+		}
+	
+		.horiScroll > .row {
+		  display: flex;
+		  flex-wrap: nowrap;
+		  overflow-x: auto;
+		}
+		.horiScroll > .row > .col-8 {
+		  flex: 0 0 auto;
+		}	
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+	<a class="navbar-brand" href="#"><img style="margin-left:5px" src="img/kulturlotse.svg" height="32" alt="Kulturlotsen-Logo"></a> 
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span> 
+    </button> 
+	<div class="navbar-collapse collapse" id="navbarContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> 
+			<div class="dropdown-menu" aria-labelledby="dropdown04">
+				<a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> 
+			</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-md-0">
+			<input class="form-control" type="text" placeholder="Search">
+		</form>
+	</div>
+</nav>
+<div class="bg-warning">
+	<div class="container-fluid p-2">
+		<div class="row no-gutters">
+			<div class="col my-auto pr-1">
+				Eintritt frei 
+			</div>
+			<div class="col pl-1 d-flex">
+				<div class="input-group" style="flex-grow:auto">
+					<select class="form-select" style="-webkit-appearance:none">
+						<option selected> Heute </option>
+						<option value="1"> Morgen </option>
+						<option value="2"> Nächste 7 Tage </option>
+						<option value="3"> Tag wählen </option>
+					</select>
+				</div>
+				<button style="width:50px;margin-left:3px" onclick="this.hidden=true" type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#mainFilter" aria-expanded="false" aria-controls="mainFilter">…</button> 
+			</div>
+		</div>
+		<div class="collapse" id="mainFilter">
+			<div class="row no-gutters pt-2">
+				<div class="col pr-1">
+					<div class="input-group">
+						<select class="form-select" style="-webkit-appearance:none">
+							<option selected> HH + Umland </option>
+							<option value="1"> Morgen </option>
+							<option value="2"> Nächste 7 Tage </option>
+							<option value="3"> Tag wählen </option>
+						</select>
+					</div>
+				</div>
+				<div class="col pl-1">
+					<div class="input-group">
+						<select class="form-select" style="-webkit-appearance:none">
+							<option selected> Alle Themen </option>
+							<option value="1"> Morgen </option>
+							<option value="2"> Nächste 7 Tage </option>
+							<option value="3"> Tag wählen </option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row pt-2">
+				<div class="col-12">
+					<div class="input-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="search" class="form-control" aria-describedby="Suchbegriff" placeholder="Veranstaltungsname oder Stichwort">
+					</div>
+				</div>
+			</div>
+			<div class="row no-gutters pt-2">
+				<div class="col-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox">
+						<label class="form-check-label" for="gridCheck1">Nur barrierefreie zeigen</label> 
+					</div>
+				</div>
+			</div>
+			<div class="row no-gutters pt-2">
+				<div class="col-12">
+					<button type="button" class="btn btn-secondary w-100">Veranstaltungen suchen</button> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid p-3">
+	<div class="row">
+		<div class="col-12">
+			<div>
+				<span class="oi oi-star"></span> NUR HEUTE 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid p-2">
+	<div class="row position-relative">
+		<div class="col-12 carousel slide" data-bs-ride="carousel" id="carousel1">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#carousel1" data-bs-slide-to="1"></li>
+				<li data-bs-target="#carousel1" data-bs-slide-to="2"></li>
+				<li data-bs-target="#carousel1" data-bs-slide-to="3"></li>
+				<li data-bs-target="#carousel1" data-bs-slide-to="4"></li>
+				<li data-bs-target="#carousel1" data-bs-slide-to="5"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://picsum.photos/800/600?random=1" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://picsum.photos/800/600?random=2" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://picsum.photos/800/600?random=3" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://picsum.photos/800/600?random=4" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://picsum.photos/800/600?random=5" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://picsum.photos/800/600?random=6" class="d-block w-100" alt="..." /> 
+					<div class="carousel-caption">
+						<h5>
+							First slide label 
+						</h5>
+						<p>
+							Nulla vitae elit libero, a pharetra augue mollis interdum. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carousel1" role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a class="carousel-control-next" href="#carousel1" role="button" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a> 
+	</div>
+</div>
+<div class="container-fluid p-3">
+	<div class="row">
+		<div class="col-12">
+			<div>
+				<span class="oi oi-musical-note"></span> MUSIK 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row" style="display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:none; -webkit-overflow-scrolling: touch;">
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					First slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=21" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Second slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=22" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Thrird slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=23" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fourth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=24" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fivth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=25" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Sixth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=26" width="300/"> 
+		</div>
+	</div>
+</div>
+<div class="container-fluid p-3">
+	<div class="row">
+		<div class="col-12">
+			<div>
+				<span class="oi oi-book"></span> LESUNG/VORTRAG 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row" style="display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:none; -webkit-overflow-scrolling: touch;">
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					First slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=11" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Second slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=12" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Thrird slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=13" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fourth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=14" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fivth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=15" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Sixth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=16" width="300/"> 
+		</div>
+	</div>
+</div>
+<div class="container-fluid p-3">
+	<div class="row">
+		<div class="col-12">
+			<div>
+				<span class="oi oi-eye"></span> LESUNG/VORTRAG 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row" style="display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:none; -webkit-overflow-scrolling: touch;">
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					First slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=31" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Second slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=32" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Thrird slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=33" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fourth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=34" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Fivth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=35" width="300/"> 
+		</div>
+		<div style="position: relative;width:300px;margin-right:10px">
+			<div style="color:white;padding:100px 20px 20px 20px;float:left;position:absolute;width:300px">
+				<h5>
+					Sixth slide label 
+				</h5>
+				<p>
+					Nulla vitae elit libero, a pharetra augue mollis interdum. 
+				</p>
+			</div>
+			<img src="https://picsum.photos/800/600?random=36" width="300/"> 
+		</div>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<!-- Footer -->
+<footer class="bg-dark text-center text-white mt-3 shadow w-100">
+
+				<div class="col-12 pt-2 mb-2 text-warning">
+					Kulturlotse Hamburg e.V. (gemeinnützig)
+				</div>
+
+
+				<div class="col-12 text-center">
+					<h3>Spendenkonto</h3>
+					GLS Gemeinschaftsbank eG, IBAN: DE50 4306 0967 2041 9378 00, BIC: GENODEM1GLS<br>
+				</div>
+			
+
+				<div class="text-center pt-2 mt-2 col-12 d-print-none border-top border-secondary">
+					<ul class="pb-2 pl-0 list-unstyled">
+						<li><a href="//www.kulturlotse.de/veranstaltung-melden/">Event melden</a> | <a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a> | <a href="https://www.facebook.com/Kulturlotse" target="_blank"><img alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiM0RDZGQTk7IiBkPSJNNDc2LjY5LDUxMkgzNS4zMUMxNS44OSw1MTIsMCw0OTYuMTEsMCw0NzYuNjlWMzUuMzFDMCwxNS44OSwxNS44OSwwLDM1LjMxLDBINDc2LjY5DQoJQzQ5Ni4xMSwwLDUxMiwxNS44OSw1MTIsMzUuMzFWNDc2LjY5QzUxMiw0OTYuMTEsNDk2LjExLDUxMiw0NzYuNjksNTEyIi8+DQo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTQzMi41NTIsODguMjc2djg4LjI3NmgtNzkuNDQ4Yy05LjcxLDAtMTcuNjU1LDcuOTQ1LTE3LjY1NSwxNy42NTV2NTIuOTY2aDg4LjI3NnY4OC4yNzZoLTg4LjI3Ng0KCVY1MTJoLTg4LjI3NlYzMzUuNDQ4aC03MC42MjF2LTg4LjI3Nmg3MC42MjF2LTUyLjk2NmMwLTU1LjYxNCw0Mi4zNzItMTAxLjUxNyw5Ny4xMDMtMTA1LjkzMUg0MzIuNTUyeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" style="height:1em"/></a> | <a href="/rss.xml"><img alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQ1NS43MzEgNDU1LjczMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDU1LjczMSA0NTUuNzMxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cmVjdCB4PSIwIiB5PSIwIiBzdHlsZT0iZmlsbDojRjc4NDIyOyIgd2lkdGg9IjQ1NS43MzEiIGhlaWdodD0iNDU1LjczMSIvPg0KCTxnPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI5Ni4yMDgsMTU5LjE2QzIzNC40NDUsOTcuMzk3LDE1Mi4yNjYsNjMuMzgyLDY0LjgxLDYzLjM4MnY2NC4zNDgNCgkJCWM3MC4yNjgsMCwxMzYuMjg4LDI3LjMyMSwxODUuODk4LDc2LjkzMWM0OS42MDksNDkuNjEsNzYuOTMxLDExNS42Myw3Ni45MzEsMTg1Ljg5OGg2NC4zNDgNCgkJCUMzOTEuOTg2LDMwMy4xMDMsMzU3Ljk3MSwyMjAuOTIzLDI5Ni4yMDgsMTU5LjE2eiIvPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTY0LjE0MywxNzIuMjczdjY0LjM0OGM4NC44ODEsMCwxNTMuOTM4LDY5LjA1NiwxNTMuOTM4LDE1My45MzloNjQuMzQ4DQoJCQlDMjgyLjQyOSwyNzAuMTk2LDE4NC41MDcsMTcyLjI3Myw2NC4xNDMsMTcyLjI3M3oiLz4NCgkJPGNpcmNsZSBzdHlsZT0iZmlsbDojRkZGRkZGOyIgY3g9IjEwOS44MzMiIGN5PSIzNDYuMjYiIHI9IjQ2LjA4OCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" style="height:1em" /></a></li>
+
+					</ul>
+				</div>
+
+				
+			</footer>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+</script>
+</body>
+</html>
