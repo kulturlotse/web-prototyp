@@ -1,5 +1,4 @@
-html,
-body {
+html,body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
@@ -42,4 +41,34 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+}
+
+
+.slide-row {
+    height: 300px;
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:none;
+    -webkit-overflow-scrolling: touch;
+}
+
+p.slide-text {
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    margin: 0 0 24px;
+
+}
+
+p.slide-title {
+    border-top: 1px dashed #70673b;
+    border-bottom: 1px dashed #70673b;
+    padding-left: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #424240;
+    background-color: rgba(255, 255, 255, 0.7);
 }
